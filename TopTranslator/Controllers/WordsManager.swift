@@ -26,40 +26,34 @@ class WordsManager {
             print("Error read text from file")
         }
         
-        let test = removeSpecialCharsFromString(text: content!)
+        let clearText = removeSpecialSymbols(text: content!)
         
-        print(test)
+        let separatedWords = separateToSingleWord(text: clearText)
+        
+        print(separatedWords)
+        
+        
         
         return content
     }
-    /*
-    func prepareText (text:String) -> String {
-        
-        let splitByLines = text.components(separatedBy: "\n")
-        
-        let set = CharacterSet.decimalDigits
-        
-        for line in splitByLines {
-            
-            while   line.contains(".") ||
-                    line.contains("\"") ||
-                    line.contains(",") ||
-                    line.contains("/") ||
-                    line.contains(<#T##element: Character##Character#>)
-        }
-        
-    }
- */
     
-    private func removeSpecialCharsFromString(text: String) -> String {
+    func removeSpecialSymbols (text:String) -> String {
         let allowedChars : Set<Character> =
-            Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890+-*=(),.:!_".characters)
-        return String(text.filter({allowedChars.contains($0)}))//.filter //{allowedChars.contains($0) })
+            Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ")
+        return String(text.filter({allowedChars.contains($0)}))
+    }
+    
+    func separateToSingleWord (text:String) -> [String] {
+        let capitalized = text.capitalized
+        let result = capitalized.components(separatedBy: " ")
+        return result
     }
     
     
-    func calculateRepeats (text:String) {
+    func countDuplicates (text:String) {
     }
+    
+    func removeDuplicates
     
     
 }
