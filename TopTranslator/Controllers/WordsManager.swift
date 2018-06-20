@@ -30,7 +30,7 @@ class WordsManager {
         
         let separatedWords = separateToSingleWord(text: clearText)
         
-        print(separatedWords.removeDuplicates)
+        print(separatedWords)
         
         
         
@@ -60,4 +60,3 @@ class WordsManager {
     
 }
 
-extension Array where Element: Hashable{ var removeDuplicates: Array{ return filter { i in filter { $0 == i }.count > 1 } } } //print(Set(data.removeDuplicates))
