@@ -30,7 +30,7 @@ class WordsManager {
         
         let separatedWords = separateToSingleWord(text: clearText)
         
-        print(separatedWords)
+        print(separatedWords.removeDuplicates)
         
         
         
@@ -50,10 +50,14 @@ class WordsManager {
     }
     
     
-    func countDuplicates (text:String) {
+    func findDuplicates (text:String) {
+        let x = [1, 1, 2, 3, 4, 5, 5]
+        let duplicates = Array(Set(x.filter({ i in x.filter({ $0 == i }).count > 1})))
     }
     
-    func removeDuplicates
+    //func removeDuplicates
     
     
 }
+
+extension Array where Element: Hashable{ var removeDuplicates: Array{ return filter { i in filter { $0 == i }.count > 1 } } } //print(Set(data.removeDuplicates))
