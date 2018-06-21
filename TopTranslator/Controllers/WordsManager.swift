@@ -12,7 +12,7 @@ class WordsManager {
     
     static let shared = WordsManager()
     
-    public func getText() -> String? {
+    public func getWords() -> [Word] {
         
         var content:String?
         
@@ -29,12 +29,26 @@ class WordsManager {
         let clearText = removeSpecialSymbols(text: content!)
         
         let separatedWords = separateToSingleWord(text: clearText)
+
+        let countedSet = NSCountedSet(array: separatedWords)
         
-        print(separatedWords)
+        var words = [Word]()
         
+        for (key, value) in countedSet.dictionary {
+            
+            let name = key as! String
+            
+            if (name.count > 2) {
+                let word = Word.init(withName: name, withCount: value)
+                words.append(word)
+            }
+        }
         
+        let sortedWords =  words.sorted(by:{$0.count > $1.count})
         
-        return content
+        let result = sortedWords
+        
+        return result
     }
     
     func removeSpecialSymbols (text:String) -> String {
@@ -49,14 +63,17 @@ class WordsManager {
         return result
     }
     
-    
-    func findDuplicates (text:String) {
-        let x = [1, 1, 2, 3, 4, 5, 5]
-        let duplicates = Array(Set(x.filter({ i in x.filter({ $0 == i }).count > 1})))
+}
+
+extension NSCountedSet {
+    var occurences: [(object: Any, count: Int)] {
+        return allObjects.map { ($0, count(for: $0))}
     }
-    
-    //func removeDuplicates
-    
-    
+    var dictionary: [AnyHashable: Int] {
+        return allObjects.reduce(into: [AnyHashable: Int](), {
+            guard let key = $1 as? AnyHashable else { return }
+            $0[key] = count(for: key)
+        })
+    }
 }
 

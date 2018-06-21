@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		832F54CC20D0A2B0002E7E3B /* quotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 832F54CB20D0A2B0002E7E3B /* quotes.txt */; };
 		832F54CE20D0A339002E7E3B /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F54CD20D0A339002E7E3B /* WordsManager.swift */; };
+		8337E8F320DB27850093FC94 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337E8F220DB27850093FC94 /* Word.swift */; };
 		83E5646D1FADFED3003E2C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5646C1FADFED3003E2C55 /* AppDelegate.swift */; };
 		83E5646F1FADFED3003E2C55 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5646E1FADFED3003E2C55 /* FirstViewController.swift */; };
 		83E564711FADFED3003E2C55 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E564701FADFED3003E2C55 /* SecondViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		832F54CB20D0A2B0002E7E3B /* quotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quotes.txt; sourceTree = "<group>"; };
 		832F54CD20D0A339002E7E3B /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
+		8337E8F220DB27850093FC94 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		83E564691FADFED3003E2C55 /* TopTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E5646C1FADFED3003E2C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E5646E1FADFED3003E2C55 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		832F54CF20D0A344002E7E3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8337E8F220DB27850093FC94 /* Word.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,9 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				83E5646C1FADFED3003E2C55 /* AppDelegate.swift */,
+				83E564721FADFED3003E2C55 /* Main.storyboard */,
 				832F54D020D0A34B002E7E3B /* Controllers */,
 				832F54CF20D0A344002E7E3B /* Model */,
-				83E564721FADFED3003E2C55 /* Main.storyboard */,
 				832F54CA20D0A272002E7E3B /* Resources */,
 				832F54D120D0A378002E7E3B /* Helpers */,
 			);
@@ -180,6 +183,7 @@
 			files = (
 				83E564711FADFED3003E2C55 /* SecondViewController.swift in Sources */,
 				83E5646D1FADFED3003E2C55 /* AppDelegate.swift in Sources */,
+				8337E8F320DB27850093FC94 /* Word.swift in Sources */,
 				83E5646F1FADFED3003E2C55 /* FirstViewController.swift in Sources */,
 				832F54CE20D0A339002E7E3B /* WordsManager.swift in Sources */,
 			);
