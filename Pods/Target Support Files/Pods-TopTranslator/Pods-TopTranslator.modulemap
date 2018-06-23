@@ -1,0 +1,6 @@
+framework module Pods_TopTranslator {
+  umbrella header "Pods-TopTranslator-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,7 +13,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let wordsManager = WordsManager.shared
-        wordsManager.getText()
+        wordsManager.getWords(fromText: "full_peace")
     }
 
     override func didReceiveMemoryWarning() {

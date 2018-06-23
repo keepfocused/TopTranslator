@@ -12,21 +12,19 @@ class WordsManager {
     
     static let shared = WordsManager()
     
-    public func getWords() -> [Word] {
+    let lifecycleWatchDog = WatchDog(logLifecycle: true)
+    
+    public func getWords(fromText text:String) -> [Word] {
         
-        var content:String?
+        let queut = queue
         
-        let path = Bundle.main.path(forResource: "quotes", ofType: "txt")
+
         
-        do {
-            let text = try String.init(contentsOfFile: path!, encoding: .utf8)
-            content = text
-        }
-        catch {
-            print("Error read text from file")
-        }
+        let methodWatchDog = WatchDog(named: "Transform")
         
-        let clearText = removeSpecialSymbols(text: content!)
+        let content = extractToString(bookNamedWith: "full_peace")
+        
+        let clearText = removeSpecialSymbols(text: content)
         
         let separatedWords = separateToSingleWord(text: clearText)
 
@@ -48,7 +46,27 @@ class WordsManager {
         
         let result = sortedWords
         
+       // print(result)
+
+        
         return result
+    }
+    
+    func extractToString(bookNamedWith bookName:String) -> String {
+        
+        var content:String?
+        
+        let path = Bundle.main.path(forResource: bookName, ofType: "txt")
+        
+        do {
+            let text = try String.init(contentsOfFile: path!, encoding: .utf8)
+            content = text
+        }
+        catch {
+            print("Error read text from file")
+        }
+        
+        return content!
     }
     
     func removeSpecialSymbols (text:String) -> String {
