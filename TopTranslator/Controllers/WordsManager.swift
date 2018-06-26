@@ -14,15 +14,11 @@ class WordsManager {
     
     let lifecycleWatchDog = WatchDog(logLifecycle: true)
     
-    public func getWords(fromText text:String) -> [Word] {
+    public func getWords(fromBookNamed bookName:String) -> [Word] {
         
-        let queut = queue
+        let methodWatchDog = WatchDog(named: bookName)
         
-
-        
-        let methodWatchDog = WatchDog(named: "Transform")
-        
-        let content = extractToString(bookNamedWith: "full_peace")
+        let content = extractToString(bookNamedWith: bookName)
         
         let clearText = removeSpecialSymbols(text: content)
         
@@ -45,10 +41,7 @@ class WordsManager {
         let sortedWords =  words.sorted(by:{$0.count > $1.count})
         
         let result = sortedWords
-        
-       // print(result)
 
-        
         return result
     }
     

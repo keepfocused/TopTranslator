@@ -11,10 +11,17 @@
 		832F54CC20D0A2B0002E7E3B /* book.txt in Resources */ = {isa = PBXBuildFile; fileRef = 832F54CB20D0A2B0002E7E3B /* book.txt */; };
 		832F54CE20D0A339002E7E3B /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F54CD20D0A339002E7E3B /* WordsManager.swift */; };
 		8337E8F320DB27850093FC94 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337E8F220DB27850093FC94 /* Word.swift */; };
-		83C8445320DDBD2300CF7D55 /* book2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8445220DDBD2300CF7D55 /* book2.txt */; };
-		83C8445520DDBF2D00CF7D55 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8445420DDBF2D00CF7D55 /* text.txt */; };
-		83C8445720DDC07C00CF7D55 /* full_peace.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8445620DDC07C00CF7D55 /* full_peace.txt */; };
+		83C8445720DDC07C00CF7D55 /* full_peace1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8445620DDC07C00CF7D55 /* full_peace1.txt */; };
 		83C8445920DDC3EF00CF7D55 /* WatchDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C8445820DDC3EF00CF7D55 /* WatchDog.swift */; };
+		83C8447920DEA69D00CF7D55 /* full_peace2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447820DEA69D00CF7D55 /* full_peace2.txt */; };
+		83C8448220DEA6AD00CF7D55 /* karenina2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447A20DEA6AB00CF7D55 /* karenina2.txt */; };
+		83C8448320DEA6AD00CF7D55 /* karenina4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447B20DEA6AB00CF7D55 /* karenina4.txt */; };
+		83C8448420DEA6AD00CF7D55 /* war_peace4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447C20DEA6AB00CF7D55 /* war_peace4.txt */; };
+		83C8448520DEA6AD00CF7D55 /* karenina3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447D20DEA6AB00CF7D55 /* karenina3.txt */; };
+		83C8448620DEA6AD00CF7D55 /* war_peace1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447E20DEA6AC00CF7D55 /* war_peace1.txt */; };
+		83C8448720DEA6AD00CF7D55 /* karenina1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447F20DEA6AC00CF7D55 /* karenina1.txt */; };
+		83C8448820DEA6AD00CF7D55 /* war_peace2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8448020DEA6AC00CF7D55 /* war_peace2.txt */; };
+		83C8448920DEA6AD00CF7D55 /* war_peace3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8448120DEA6AC00CF7D55 /* war_peace3.txt */; };
 		83E5646D1FADFED3003E2C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5646C1FADFED3003E2C55 /* AppDelegate.swift */; };
 		83E5646F1FADFED3003E2C55 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5646E1FADFED3003E2C55 /* FirstViewController.swift */; };
 		83E564711FADFED3003E2C55 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E564701FADFED3003E2C55 /* SecondViewController.swift */; };
@@ -27,10 +34,17 @@
 		832F54CB20D0A2B0002E7E3B /* book.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = book.txt; sourceTree = "<group>"; };
 		832F54CD20D0A339002E7E3B /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 		8337E8F220DB27850093FC94 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		83C8445220DDBD2300CF7D55 /* book2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = book2.txt; sourceTree = "<group>"; };
-		83C8445420DDBF2D00CF7D55 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
-		83C8445620DDC07C00CF7D55 /* full_peace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = full_peace.txt; sourceTree = "<group>"; };
+		83C8445620DDC07C00CF7D55 /* full_peace1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = full_peace1.txt; sourceTree = "<group>"; };
 		83C8445820DDC3EF00CF7D55 /* WatchDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDog.swift; sourceTree = "<group>"; };
+		83C8447820DEA69D00CF7D55 /* full_peace2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = full_peace2.txt; sourceTree = "<group>"; };
+		83C8447A20DEA6AB00CF7D55 /* karenina2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = karenina2.txt; sourceTree = "<group>"; };
+		83C8447B20DEA6AB00CF7D55 /* karenina4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = karenina4.txt; sourceTree = "<group>"; };
+		83C8447C20DEA6AB00CF7D55 /* war_peace4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = war_peace4.txt; sourceTree = "<group>"; };
+		83C8447D20DEA6AB00CF7D55 /* karenina3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = karenina3.txt; sourceTree = "<group>"; };
+		83C8447E20DEA6AC00CF7D55 /* war_peace1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = war_peace1.txt; sourceTree = "<group>"; };
+		83C8447F20DEA6AC00CF7D55 /* karenina1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = karenina1.txt; sourceTree = "<group>"; };
+		83C8448020DEA6AC00CF7D55 /* war_peace2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = war_peace2.txt; sourceTree = "<group>"; };
+		83C8448120DEA6AC00CF7D55 /* war_peace3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = war_peace3.txt; sourceTree = "<group>"; };
 		83E564691FADFED3003E2C55 /* TopTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E5646C1FADFED3003E2C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E5646E1FADFED3003E2C55 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -69,10 +83,17 @@
 		832F54CA20D0A272002E7E3B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				83C8445220DDBD2300CF7D55 /* book2.txt */,
 				832F54CB20D0A2B0002E7E3B /* book.txt */,
-				83C8445420DDBF2D00CF7D55 /* text.txt */,
-				83C8445620DDC07C00CF7D55 /* full_peace.txt */,
+				83C8447820DEA69D00CF7D55 /* full_peace2.txt */,
+				83C8445620DDC07C00CF7D55 /* full_peace1.txt */,
+				83C8447F20DEA6AC00CF7D55 /* karenina1.txt */,
+				83C8447A20DEA6AB00CF7D55 /* karenina2.txt */,
+				83C8447D20DEA6AB00CF7D55 /* karenina3.txt */,
+				83C8447B20DEA6AB00CF7D55 /* karenina4.txt */,
+				83C8447E20DEA6AC00CF7D55 /* war_peace1.txt */,
+				83C8448020DEA6AC00CF7D55 /* war_peace2.txt */,
+				83C8448120DEA6AC00CF7D55 /* war_peace3.txt */,
+				83C8447C20DEA6AB00CF7D55 /* war_peace4.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -214,13 +235,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C8448920DEA6AD00CF7D55 /* war_peace3.txt in Resources */,
+				83C8448320DEA6AD00CF7D55 /* karenina4.txt in Resources */,
 				83E564791FADFED3003E2C55 /* LaunchScreen.storyboard in Resources */,
-				83C8445520DDBF2D00CF7D55 /* text.txt in Resources */,
+				83C8448820DEA6AD00CF7D55 /* war_peace2.txt in Resources */,
+				83C8447920DEA69D00CF7D55 /* full_peace2.txt in Resources */,
 				832F54CC20D0A2B0002E7E3B /* book.txt in Resources */,
-				83C8445720DDC07C00CF7D55 /* full_peace.txt in Resources */,
+				83C8445720DDC07C00CF7D55 /* full_peace1.txt in Resources */,
+				83C8448720DEA6AD00CF7D55 /* karenina1.txt in Resources */,
 				83E564761FADFED3003E2C55 /* Assets.xcassets in Resources */,
+				83C8448620DEA6AD00CF7D55 /* war_peace1.txt in Resources */,
+				83C8448420DEA6AD00CF7D55 /* war_peace4.txt in Resources */,
+				83C8448520DEA6AD00CF7D55 /* karenina3.txt in Resources */,
 				83E564741FADFED3003E2C55 /* Main.storyboard in Resources */,
-				83C8445320DDBD2300CF7D55 /* book2.txt in Resources */,
+				83C8448220DEA6AD00CF7D55 /* karenina2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
