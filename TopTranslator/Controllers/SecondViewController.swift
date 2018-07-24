@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import ZLSwipeableViewSwift
+
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var swipeableView = ZLSwipeableView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
+        view.addSubview(swipeableView)
     }
 
     override func didReceiveMemoryWarning() {
