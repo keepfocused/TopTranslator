@@ -94,7 +94,7 @@ class ViewManager : NSObject {
             removeBehavior(behavior: anchorViewToPointAttachmentBehavior)
         }
         if let pushBehavior = pushBehavior {
-            removeBehavior(pushBehavior)
+            removeBehavior(behavior: pushBehavior)
         }
         
         for gestureRecognizer in view.gestureRecognizers! {
@@ -119,7 +119,7 @@ class ViewManager : NSObject {
         case .began:
             guard case .Snapping(_) = state else { return }
             state = .Moving(location)
-            swipeableView.didStart?(view: view, atLocation: location)
+            swipeableView.didStart?(view, location)
         case .changed:
             guard case .Moving(_) = state else { return }
             state = .Moving(location)
@@ -132,49 +132,49 @@ class ViewManager : NSObject {
                 swipeableView.swipeView(view: view, location: location, directionVector: directionVector)
             } else {
                 state = snappingStateAtContainerCenter()
-                swipeableView.didCancel?(view: view)
+                swipeableView.didCancel?(view)
             }
-            swipeableView.didEnd?(view: view, atLocation: location)
+            swipeableView.didEnd?(view, location)
         default:
             break
         }
     }
     
     func handleTap(recognizer: UITapGestureRecognizer) {
-        guard let swipeableView = swipeableView, topView = swipeableView.topView()  else { return }
+        guard let swipeableView = swipeableView, let topView = swipeableView.topView()  else { return }
         
-        let location = recognizer.locationInView(containerView)
-        swipeableView.didTap?(view: topView, atLocation: location)
+        let location = recognizer.location(in: containerView)
+        swipeableView.didTap?(topView, location)
     }
     
     private func snapView(point: CGPoint) {
-        snapBehavior = UISnapBehavior(item: view, snapToPoint: point)
+        snapBehavior = UISnapBehavior(item: view, snapTo: point)
         snapBehavior!.damping = 0.75
-        addBehavior(snapBehavior)
+        addBehavior(behavior: snapBehavior)
     }
     
     private func unsnapView() {
         guard let snapBehavior = snapBehavior else { return }
-        removeBehavior(snapBehavior)
+        removeBehavior(behavior: snapBehavior)
     }
     
     private func attachView(toPoint point: CGPoint) {
         anchorView.center = point
-        anchorView.backgroundColor = UIColor.blueColor()
-        anchorView.hidden = true
+        anchorView.backgroundColor = UIColor.blue
+        anchorView.isHidden = true
         
         // attach aView to anchorView
         let p = view.center
-        viewToAnchorViewAttachmentBehavior = UIAttachmentBehavior(item: view, offsetFromCenter: UIOffset(horizontal: -(p.x - point.x), vertical: -(p.y - point.y)), attachedToItem: anchorView, offsetFromCenter: UIOffsetZero)
+        viewToAnchorViewAttachmentBehavior = UIAttachmentBehavior(item: view, offsetFromCenter: UIOffset(horizontal: -(p.x - point.x), vertical: -(p.y - point.y)), attachedTo: anchorView, offsetFromCenter: UIOffset.zero)
         viewToAnchorViewAttachmentBehavior!.length = 0
         
         // attach anchorView to point
-        anchorViewToPointAttachmentBehavior = UIAttachmentBehavior(item: anchorView, offsetFromCenter: UIOffsetZero, attachedToAnchor: point)
+        anchorViewToPointAttachmentBehavior = UIAttachmentBehavior(item: anchorView, offsetFromCenter: UIOffset.zero, attachedToAnchor: point)
         anchorViewToPointAttachmentBehavior!.damping = 100
         anchorViewToPointAttachmentBehavior!.length = 0
         
-        addBehavior(viewToAnchorViewAttachmentBehavior!)
-        addBehavior(anchorViewToPointAttachmentBehavior!)
+        addBehavior(behavior: viewToAnchorViewAttachmentBehavior!)
+        addBehavior(behavior: anchorViewToPointAttachmentBehavior!)
     }
     
     private func moveView(toPoint point: CGPoint) {
@@ -184,23 +184,23 @@ class ViewManager : NSObject {
     
     private func detachView() {
         guard let viewToAnchorViewAttachmentBehavior = viewToAnchorViewAttachmentBehavior, let anchorViewToPointAttachmentBehavior = anchorViewToPointAttachmentBehavior else { return }
-        removeBehavior(viewToAnchorViewAttachmentBehavior)
-        removeBehavior(anchorViewToPointAttachmentBehavior)
+        removeBehavior(behavior: viewToAnchorViewAttachmentBehavior)
+        removeBehavior(behavior: anchorViewToPointAttachmentBehavior)
     }
     
     private func pushView(fromPoint point: CGPoint, inDirection direction: CGVector) {
         guard let _ = viewToAnchorViewAttachmentBehavior, let anchorViewToPointAttachmentBehavior = anchorViewToPointAttachmentBehavior  else { return }
         
-        removeBehavior(anchorViewToPointAttachmentBehavior)
+        removeBehavior(behavior: anchorViewToPointAttachmentBehavior)
         
-        pushBehavior = UIPushBehavior(items: [anchorView], mode: .Instantaneous)
+        pushBehavior = UIPushBehavior(items: [anchorView], mode: .instantaneous)
         pushBehavior.pushDirection = direction
-        addBehavior(pushBehavior)
+        addBehavior(behavior: pushBehavior)
     }
     
     private func unpushView() {
         guard let pushBehavior = pushBehavior else { return }
-        removeBehavior(pushBehavior)
+        removeBehavior(behavior: pushBehavior)
     }
     
     private func addBehavior(behavior: UIDynamicBehavior) {

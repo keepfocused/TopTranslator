@@ -25,7 +25,7 @@ class Scheduler : NSObject {
     }
     
     func doAction(timer: Timer) {
-        guard let action = action, let endCondition = endCondition where !endCondition() else {
+        guard let action = action, let endCondition = endCondition, !endCondition() else {
             timer.invalidate()
             self.timer = nil
             self.action = nil
