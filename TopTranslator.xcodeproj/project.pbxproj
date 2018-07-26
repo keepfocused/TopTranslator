@@ -11,6 +11,7 @@
 		832F54CC20D0A2B0002E7E3B /* book.txt in Resources */ = {isa = PBXBuildFile; fileRef = 832F54CB20D0A2B0002E7E3B /* book.txt */; };
 		832F54CE20D0A339002E7E3B /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F54CD20D0A339002E7E3B /* WordsManager.swift */; };
 		8337E8F320DB27850093FC94 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337E8F220DB27850093FC94 /* Word.swift */; };
+		83C5172821094BF200D9F23D /* ZLSwipeableViewSwift in Resources */ = {isa = PBXBuildFile; fileRef = 83C5172721094BF200D9F23D /* ZLSwipeableViewSwift */; };
 		83C8445720DDC07C00CF7D55 /* full_peace1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8445620DDC07C00CF7D55 /* full_peace1.txt */; };
 		83C8445920DDC3EF00CF7D55 /* WatchDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C8445820DDC3EF00CF7D55 /* WatchDog.swift */; };
 		83C8447920DEA69D00CF7D55 /* full_peace2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83C8447820DEA69D00CF7D55 /* full_peace2.txt */; };
@@ -34,6 +35,7 @@
 		832F54CB20D0A2B0002E7E3B /* book.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = book.txt; sourceTree = "<group>"; };
 		832F54CD20D0A339002E7E3B /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 		8337E8F220DB27850093FC94 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		83C5172721094BF200D9F23D /* ZLSwipeableViewSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ZLSwipeableViewSwift; sourceTree = "<group>"; };
 		83C8445620DDC07C00CF7D55 /* full_peace1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = full_peace1.txt; sourceTree = "<group>"; };
 		83C8445820DDC3EF00CF7D55 /* WatchDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDog.swift; sourceTree = "<group>"; };
 		83C8447820DEA69D00CF7D55 /* full_peace2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = full_peace2.txt; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		83E5646B1FADFED3003E2C55 /* TopTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				83C5172721094BF200D9F23D /* ZLSwipeableViewSwift */,
 				83E5646C1FADFED3003E2C55 /* AppDelegate.swift */,
 				83E564721FADFED3003E2C55 /* Main.storyboard */,
 				832F54D020D0A34B002E7E3B /* Controllers */,
@@ -239,6 +242,7 @@
 				83C8448920DEA6AD00CF7D55 /* war_peace3.txt in Resources */,
 				83C8448320DEA6AD00CF7D55 /* karenina4.txt in Resources */,
 				83E564791FADFED3003E2C55 /* LaunchScreen.storyboard in Resources */,
+				83C5172821094BF200D9F23D /* ZLSwipeableViewSwift in Resources */,
 				83C8448820DEA6AD00CF7D55 /* war_peace2.txt in Resources */,
 				83C8447920DEA69D00CF7D55 /* full_peace2.txt in Resources */,
 				832F54CC20D0A2B0002E7E3B /* book.txt in Resources */,
