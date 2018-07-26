@@ -189,7 +189,6 @@
 				83E564651FADFED3003E2C55 /* Sources */,
 				83E564661FADFED3003E2C55 /* Frameworks */,
 				83E564671FADFED3003E2C55 /* Resources */,
-				1A1A548FAF09ADE1B4873C5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,28 +259,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A1A548FAF09ADE1B4873C5B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TopTranslator/Pods-TopTranslator-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
-				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/ZLSwipeableViewSwift/ZLSwipeableViewSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLSwipeableViewSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopTranslator/Pods-TopTranslator-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ED4511F9146FD4B3B9D22676 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
