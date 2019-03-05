@@ -1,3 +1,30 @@
-PODFILE CHECKSUM: 7629c1804e61449d287dfc9caa02580f394ec566
+PODS:
+  - Cartography (3.1.0)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
+  - "UIColor+FlatColors (0.0.2)"
 
-COCOAPODS: 1.5.0
+DEPENDENCIES:
+  - Cartography
+  - RealmSwift
+  - "UIColor+FlatColors"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cartography
+    - Realm
+    - RealmSwift
+    - "UIColor+FlatColors"
+
+SPEC CHECKSUMS:
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+  "UIColor+FlatColors": 6c699df7a575281794c688c64cee6c44fd1f93b4
+
+PODFILE CHECKSUM: e54a46b47b5e2898a17a46c184c79c5bde6a327c
+
+COCOAPODS: 1.5.3

@@ -14,35 +14,37 @@ class WordsManager {
     
     let lifecycleWatchDog = WatchDog(logLifecycle: true)
     
-    public func getWords(fromBookNamed bookName:String) -> [Word] {
+    public func getWords(fromBookNamed bookName:String) -> ScanData {
         
         let methodWatchDog = WatchDog(named: bookName)
-        
         let content = extractToString(bookNamedWith: bookName)
-        
-        let clearText = removeSpecialSymbols(text: content)
-        
+        let textWithotCodeSnippets = removeCodeTextInBrackets(text: content)
+        let clearText = removeSpecialSymbols(text: textWithotCodeSnippets)
         let separatedWords = separateToSingleWord(text: clearText)
-
         let countedSet = NSCountedSet(array: separatedWords)
-        
-        var words = [Word]()
+        var words = [WordAsset]()
         
         for (key, value) in countedSet.dictionary {
             
             let name = key as! String
             
             if (name.count > 2) {
-                let word = Word.init(withName: name, withCount: value)
+                let word = WordAsset()
+                word.word = name
+                word.foundedInTextCount = value
                 words.append(word)
             }
         }
         
-        let sortedWords =  words.sorted(by:{$0.count > $1.count})
+        let sortedWords =  words.sorted(by:{$0.foundedInTextCount > $1.foundedInTextCount})
         
-        let result = sortedWords
+        var wordsData = ScanData()
+        wordsData.words.append(objectsIn: sortedWords)
+        wordsData.identifier = ProcessInfo.processInfo.globallyUniqueString
+        wordsData.wordsHash = sortedWords.hashValue
+        
 
-        return result
+        return wordsData
     }
     
     func extractToString(bookNamedWith bookName:String) -> String {
@@ -62,6 +64,10 @@ class WordsManager {
         return content!
     }
     
+    func removeCodeTextInBrackets(text: String) -> String {
+        return text.replacingOccurrences(of: "\\s?\\{[\\w\\s]*\\}", with: "", options: .regularExpression)
+    }
+    
     func removeSpecialSymbols (text:String) -> String {
         let allowedChars : Set<Character> =
             Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ")
@@ -74,6 +80,13 @@ class WordsManager {
         return result
     }
     
+    func currentDate() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        return result
+    }
 }
 
 extension NSCountedSet {

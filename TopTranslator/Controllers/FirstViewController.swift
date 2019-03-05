@@ -7,67 +7,39 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let wordsManager = WordsManager.shared
-        
+
+/*
         let lifecycleWatchDog = WatchDog(logLifecycle: true)
-        
         let methodWatchDog = WatchDog(named: "Main watchDOG")
+ */
+        
+        
         
         let queue = DispatchQueue.global(qos: .userInitiated)
         
+        /*
         queue.async {
-            wordsManager.getWords(fromBookNamed: "full_peace1")
+            let wordsData = wordsManager.getWords(fromBookNamed: "book")
+            //Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
+            guard let realm = try? Realm() else { return }
+            try? realm.write {
+                wordsData.words.hashValue
+                realm.add(wordsData, update: true)
+            }
         }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "full_peace2")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "karenina1")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "karenina2")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "karenina3")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "karenina4")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "war_peace1")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "war_peace2")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "war_peace3")
-        }
-        
-        queue.async {
-            wordsManager.getWords(fromBookNamed: "war_peace4")
-        }
-        
+ */
+ 
+ 
+ 
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

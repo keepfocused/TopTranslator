@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" id="M2e-Gk-mKr" customClass="WordCell" customModule="TopTranslator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M2e-Gk-mKr" id="vMn-wx-GYM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2e-eG-ktf">
+                        <rect key="frame" x="332" y="6" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="27" id="26M-qw-QSY"/>
+                        </constraints>
+                        <state key="normal" title="Button" backgroundImage="add1"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="v2e-eG-ktf" firstAttribute="bottom" secondItem="vMn-wx-GYM" secondAttribute="bottomMargin" id="51V-Xu-Bs6"/>
+                    <constraint firstItem="v2e-eG-ktf" firstAttribute="top" secondItem="vMn-wx-GYM" secondAttribute="topMargin" constant="-5" id="7G0-6N-zWh"/>
+                    <constraint firstItem="v2e-eG-ktf" firstAttribute="trailing" secondItem="vMn-wx-GYM" secondAttribute="trailingMargin" id="OEf-dN-t8V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addButton" destination="v2e-eG-ktf" id="Zxg-8o-1uT"/>
+            </connections>
+            <point key="canvasLocation" x="-48.5" y="-301"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="add1" width="26" height="26"/>
+    </resources>
+</document>

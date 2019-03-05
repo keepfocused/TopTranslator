@@ -7,23 +7,21 @@
 //
 
 import UIKit
-import ZLSwipeableViewSwift
+import RealmSwift
 
-
-class SecondViewController: UIViewController {
-
+class SecondViewController: ZLSwipeableViewController {
+    
+    var words = [WordAsset]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var swipeableView = ZLSwipeableView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
-        view.addSubview(swipeableView)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+        guard let realm = try? Realm() else { return }
+        let learnWords = realm.objects(WordAsset.self).filter("inLearn == true")
+        if learnWords.count > 0 {
+            self.words = Array(learnWords)
+        }
+        
+        self.swipeableView.numberOfActiveView = 3
+    }    
 }
-
